@@ -1,0 +1,9 @@
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo foo
+      - if: success()
+        run: echo success

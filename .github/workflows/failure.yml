@@ -1,0 +1,10 @@
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: exit 1
+        continue-on-error: true
+      - if: failure()
+        run: echo failure

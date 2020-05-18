@@ -1,0 +1,11 @@
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: exit 1
+      - if: always()
+        run: echo always
+      - if: failure()
+        run: echo failure
